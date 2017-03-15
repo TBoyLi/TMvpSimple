@@ -29,10 +29,10 @@ public class LoginPresenter extends BasePresenter<LoginContract.View> implements
     public boolean checkNull(String name, String pwd) {
         boolean isNull = false;
         if (TextUtils.isEmpty(name)) {
-            mView.loginFail("用户名不能为空");
+            mView.getNameNull("用户名不能为空");
             isNull = true;
         } else if (TextUtils.isEmpty(pwd)) {
-            mView.loginFail("密码不能为空");
+            mView.getPassWordNull("密码不能为空");
             isNull = true;
         }
         return isNull;

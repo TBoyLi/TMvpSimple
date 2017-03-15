@@ -53,6 +53,16 @@ public class LoginActivity1 extends BaseActivity<LoginContract.View, LoginPresen
     }
 
     @Override
+    public void getNameNull(String str) {
+        email.setError(str);
+    }
+
+    @Override
+    public void getPassWordNull(String str) {
+        password.setError(str);
+    }
+
+    @Override
     public void loginSuccess(String str) {
         Toast.makeText(getContext(), str, Toast.LENGTH_SHORT).show();
     }

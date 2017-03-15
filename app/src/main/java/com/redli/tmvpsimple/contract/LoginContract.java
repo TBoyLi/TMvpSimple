@@ -13,6 +13,10 @@ import com.redli.tmvpsimple.mvp.IView;
 
         String getPassWord();
 
+        void getNameNull(String str);
+
+        void getPassWordNull(String str);
+
         void loginSuccess(String str);
 
         void loginFail(String failMsg);
