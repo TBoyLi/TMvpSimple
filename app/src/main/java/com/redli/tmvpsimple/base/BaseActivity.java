@@ -9,12 +9,6 @@ import com.redli.tmvpsimple.mvp.IView;
 
 import java.lang.reflect.ParameterizedType;
 
-
-/**
- * MVPPlugin
- *  邮箱 784787081@qq.com
- */
-
 public abstract class BaseActivity<V extends IView,T extends BasePresenter<V>> extends AppCompatActivity implements IView {
     public T mPresenter;
     @Override

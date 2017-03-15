@@ -5,4 +5,8 @@ package com.redli.tmvpsimple.mvp;
  */
 
 public interface IModel {
+    /**
+     * 封装网络请求
+     */
+    void httpUtil();
 }

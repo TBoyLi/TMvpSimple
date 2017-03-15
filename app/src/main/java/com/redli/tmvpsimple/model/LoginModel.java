@@ -3,7 +3,6 @@ package com.redli.tmvpsimple.model;
 import android.support.annotation.NonNull;
 
 import com.redli.tmvpsimple.base.BaseModel;
-import com.redli.tmvpsimple.contract.LoginContract;
 
 /**
  * Created by redli on 2017/3/13.

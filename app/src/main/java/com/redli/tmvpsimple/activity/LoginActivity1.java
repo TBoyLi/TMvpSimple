@@ -2,7 +2,6 @@ package com.redli.tmvpsimple.activity;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.text.TextUtils;
 import android.view.View;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
@@ -23,8 +22,6 @@ import butterknife.ButterKnife;
 
 public class LoginActivity1 extends BaseActivity<LoginContract.View, LoginPresenter> implements
         LoginContract.View, View.OnClickListener {
-
-
 
     @BindView(R.id.email)
     AutoCompleteTextView email;
