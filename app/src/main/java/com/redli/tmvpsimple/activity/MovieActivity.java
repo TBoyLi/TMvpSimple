@@ -7,6 +7,7 @@ import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
@@ -39,7 +40,6 @@ public class MovieActivity extends BaseActivity<MovieContract.View, MoviePresent
     SwipeRefreshLayout mSwipeRefreshLayout;
 
     private MovieAdapter movieAdapter;
-//    private List<MovieItemBean> mList;
     private boolean isRefresh = false;
 
     @Override
@@ -57,6 +57,8 @@ public class MovieActivity extends BaseActivity<MovieContract.View, MoviePresent
     }
 
     private void initLayout() {
+        mProgressBar.setVisibility(View.VISIBLE);
+        mSwipeRefreshLayout.setVisibility(View.GONE);
         mSwipeRefreshLayout.setColorSchemeResources(R.color.colorAccent,
                 android.R.color.holo_red_light,
                 android.R.color.holo_orange_light,
@@ -76,6 +78,8 @@ public class MovieActivity extends BaseActivity<MovieContract.View, MoviePresent
     @Override
     public void getMovieSuccess(List<MovieItemBean> list) {
         mSwipeRefreshLayout.setRefreshing(false);
+        mProgressBar.setVisibility(View.GONE);
+        mSwipeRefreshLayout.setVisibility(View.VISIBLE);
         movieAdapter.setmList(list);
         if (isRefresh){
             movieAdapter.notifyDataSetChanged();
@@ -87,6 +91,7 @@ public class MovieActivity extends BaseActivity<MovieContract.View, MoviePresent
     @Override
     public void getMovieFail(String str) {
         mSwipeRefreshLayout.setRefreshing(false);
+        mProgressBar.setVisibility(View.GONE);
         Toast.makeText(this, str, Toast.LENGTH_SHORT).show();
     }
 }
