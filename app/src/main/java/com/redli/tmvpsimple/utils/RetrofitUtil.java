@@ -15,7 +15,7 @@ public class RetrofitUtil {
 
 //    private String baseUrl;
 
-    public static final String BASE_URL = "https://api.douban.com/v2/movie/";
+    public static final String BASE_URL = "https://api.douban.com/v2/movie/"; //可以用常量类来存一下
 
     private static final int DEFAULT_TIMEOUT = 5;
 

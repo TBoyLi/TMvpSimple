@@ -2,13 +2,12 @@ package com.redli.tmvpsimple.model;
 
 import android.support.annotation.NonNull;
 import android.util.Log;
-import android.widget.Toast;
 
 import com.redli.tmvpsimple.base.BaseModel;
 import com.redli.tmvpsimple.bean.MovieBean;
 import com.redli.tmvpsimple.bean.MovieItemBean;
 import com.redli.tmvpsimple.helper.HttpService;
-import com.redli.tmvpsimple.utils.HttpUtil;
+import com.redli.tmvpsimple.utils.RetrofitUtil;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,10 +15,8 @@ import java.util.List;
 import rx.Observable;
 import rx.Subscriber;
 import rx.android.schedulers.AndroidSchedulers;
-import rx.functions.Action1;
 import rx.functions.Func1;
 import rx.schedulers.Schedulers;
-import rx.subjects.Subject;
 
 /**
  * Created by redli on 2017/3/15.
@@ -50,7 +47,7 @@ public class MovieModel extends BaseModel {
 //            }
 //        }, start, count);
 
-        HttpUtil.getInstance().retrofit.create(HttpService.MovieService.class)
+        RetrofitUtil.getInstance().retrofit.create(HttpService.MovieService.class)
                 .getTopMovie(start, count)
                 .flatMap(new Func1<MovieBean, Observable<MovieBean.SubjectsBean>>() {
                     @Override
