@@ -11,9 +11,9 @@ import retrofit2.converter.gson.GsonConverterFactory;
  * Created by redli on 2017/3/15.
  */
 
-public class HttpUtil {
+public class RetrofitUtil {
 
-//    private String BASE_URL;
+//    private String baseUrl;
 
     public static final String BASE_URL = "https://api.douban.com/v2/movie/";
 
@@ -22,7 +22,7 @@ public class HttpUtil {
     public Retrofit retrofit;
 
     //构造方法私有
-    private HttpUtil() {
+    private RetrofitUtil() {
         //手动创建一个OkHttpClient并设置超时时间
         OkHttpClient.Builder httpClientBuilder = new OkHttpClient.Builder();
         httpClientBuilder.connectTimeout(DEFAULT_TIMEOUT, TimeUnit.SECONDS);
@@ -38,14 +38,11 @@ public class HttpUtil {
 
     //在访问HttpMethods时创建单例
     private static class SingletonHolder{
-        private static final HttpUtil INSTANCE = new HttpUtil();
+        private static final RetrofitUtil INSTANCE = new RetrofitUtil();
     }
 
     //获取单例
-    public static HttpUtil getInstance(){
+    public static RetrofitUtil getInstance(){
         return SingletonHolder.INSTANCE;
     }
-
-
-
 }
