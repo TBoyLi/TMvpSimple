@@ -24,28 +24,11 @@ import rx.schedulers.Schedulers;
 
 public class MovieModel extends BaseModel {
 
-    private List<MovieItemBean> mList;
+    private List<MovieItemBean> mList = new ArrayList<MovieItemBean>();
 
     public void getMovies(@NonNull int start, @NonNull int count, @NonNull final InfoHint infoHint){
-        mList = new ArrayList<MovieItemBean>();
         if (infoHint == null)
             throw new RuntimeException("InfoHint不能为空");
-//        HttpUtil.getInstance().getTopMovie(new Subscriber<MovieBean>() {
-//            @Override
-//            public void onCompleted() {
-//                Log.d("MovieModel", "获取电影成功");
-//            }
-//
-//            @Override
-//            public void onError(Throwable e) {
-//                infoHint.failInfo(e.getMessage());
-//            }
-//
-//            @Override
-//            public void onNext(MovieBean movieBean) {
-//                infoHint.successInfo(movieBean);
-//            }
-//        }, start, count);
 
         RetrofitUtil.getInstance().retrofit.create(HttpService.MovieService.class)
                 .getTopMovie(start, count)
