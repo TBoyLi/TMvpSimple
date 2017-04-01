@@ -2,14 +2,22 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:padding="10dp"
               android:gravity="center">
 
     <com.github.ybq.android.spinkit.SpinKitView xmlns:app="http://schemas.android.com/apk/res-auto"
-                                                style="@style/SpinKitView.CubeGrid"
+                                                style="@style/SpinKitView.Circle"
                                                 android:layout_width="wrap_content"
                                                 android:layout_height="wrap_content"
                                                 android:layout_gravity="center"
-                                                android:padding="20dp"
+                                                android:paddingTop="20dp"
+                                                android:paddingBottom="20dp"
+                                                android:paddingLeft="40dp"
+                                                android:paddingRight="40dp"
                                                 app:SpinKit_Color="@color/colorAccent"/>
-
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="loading"/>
 </LinearLayout>
