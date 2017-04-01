@@ -1,4 +1,4 @@
-package com.redli.tmvpsimple.utils;
+package com.redli.tmvpsimple.util;
 
 import android.app.Activity;
 import android.content.Context;
@@ -8,12 +8,12 @@ import android.net.NetworkInfo;
 import android.provider.Settings;
 
 /**
- * Created by redli on 2017/3/15.
+ * Created by redli on 2017/4/1.
  */
 
-public class NetUtil {
+public class NetUtils {
 
-    private NetUtil() {
+    private NetUtils() {
         throw new UnsupportedOperationException("cannot be instantiated");
     }
 
@@ -69,5 +69,4 @@ public class NetUtil {
         //流量:
         //activity.startActivity(new Intent(android.provider.Settings.ACTION_DATA_ROAMING_SETTINGS));
     }
-
 }

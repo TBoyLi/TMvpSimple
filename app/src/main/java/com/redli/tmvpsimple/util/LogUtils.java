@@ -1,4 +1,4 @@
-package com.redli.tmvpsimple.utils;
+package com.redli.tmvpsimple.util;
 
 import android.util.Log;
 

@@ -7,7 +7,7 @@ import com.redli.tmvpsimple.base.BaseModel;
 import com.redli.tmvpsimple.bean.MovieBean;
 import com.redli.tmvpsimple.bean.MovieItemBean;
 import com.redli.tmvpsimple.helper.HttpService;
-import com.redli.tmvpsimple.utils.RetrofitUtil;
+import com.redli.tmvpsimple.util.RetrofitUtil;
 
 import java.util.ArrayList;
 import java.util.List;

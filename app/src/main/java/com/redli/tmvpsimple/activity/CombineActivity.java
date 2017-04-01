@@ -10,7 +10,7 @@ import com.redli.tmvpsimple.base.BaseActivity;
 import com.redli.tmvpsimple.bean.Subject;
 import com.redli.tmvpsimple.contract.CombineContract;
 import com.redli.tmvpsimple.presenter.CombinePresenter;
-import com.redli.tmvpsimple.utils.LogUtils;
+import com.redli.tmvpsimple.util.LogUtils;
 
 import java.util.List;
 

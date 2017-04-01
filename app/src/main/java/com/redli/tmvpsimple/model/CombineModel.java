@@ -10,7 +10,6 @@ import com.redli.tmvpsimple.bean.Subject;
 import com.redli.tmvpsimple.http.Api;
 import com.redli.tmvpsimple.http.HttpUtil;
 import com.redli.tmvpsimple.http.ProgressSubscriber;
-import com.redli.tmvpsimple.utils.LogUtils;
 
 import java.util.List;
 
