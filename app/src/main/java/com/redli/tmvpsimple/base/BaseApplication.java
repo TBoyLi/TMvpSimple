@@ -2,6 +2,7 @@ package com.redli.tmvpsimple.base;
 
 import android.app.Application;
 
+import com.orhanobut.hawk.Hawk;
 import com.squareup.leakcanary.LeakCanary;
 
 /**
@@ -14,6 +15,7 @@ public class BaseApplication extends Application{
         super.onCreate();
         //配置LeakCanary
         setupLeakCanary();
+        Hawk.init(this).build();
     }
 
     private void setupLeakCanary() {

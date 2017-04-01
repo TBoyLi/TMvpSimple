@@ -8,8 +8,4 @@ import com.redli.tmvpsimple.mvp.IModel;
 
 public class BaseModel implements IModel{
 
-    @Override
-    public void httpUtil() {
-
-    }
 }

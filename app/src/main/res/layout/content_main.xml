@@ -23,4 +23,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TMvp_Rxjava_Retrofit_Movie_List"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/combine"
+        android:text="重新封装retrofit和rxjava并添加rxjava生命周期的管理"/>
 </LinearLayout>

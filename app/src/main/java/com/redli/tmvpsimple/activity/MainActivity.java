@@ -19,6 +19,8 @@ public class MainActivity extends AppCompatActivity {
         startActivity(new Intent(this, MovieActivity.class));
     }
 
+    @OnClick(R.id.combine) void jumpCombine(){ startActivity(new Intent(this, CombineActivity.class));}
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

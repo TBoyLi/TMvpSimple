@@ -1,18 +1,14 @@
 package com.redli.tmvpsimple.bean;
 
 /**
- * Created by redli on 2017/3/15.
+ * Created by redli on 2017/3/31.
  */
 
-public class HttpResultBean<T> {
+public class HttpResult<T> {
+    //用来模仿resultCode和resultMessage
     private int count;
-    private int start;
-    private int total;
-    private String title;
-
     //用来模仿Data
     private T subjects;
-
 
     public int getCount() {
         return count;
@@ -46,7 +42,6 @@ public class HttpResultBean<T> {
         this.title = title;
     }
 
-
     public T getSubjects() {
         return subjects;
     }
@@ -55,14 +50,7 @@ public class HttpResultBean<T> {
         this.subjects = subjects;
     }
 
-
-    @Override
-    public String toString() {
-        StringBuffer sb = new StringBuffer();
-        sb.append("title=" + title + " count=" + count + " start=" + start);
-        if (null != subjects) {
-            sb.append(" subjects:" + subjects.toString());
-        }
-        return sb.toString();
-    }
+    private int start;
+    private int total;
+    private String title;
 }
