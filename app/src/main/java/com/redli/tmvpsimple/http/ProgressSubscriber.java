@@ -63,7 +63,7 @@ public abstract class ProgressSubscriber<T> extends Subscriber<T> implements Pro
      */
     private void dismissProgressDialog(){
         if (dialogHandler != null) {
-            dialogHandler.dismiss();;
+            dialogHandler.dismiss();
             dialogHandler=null;
         }
     }
