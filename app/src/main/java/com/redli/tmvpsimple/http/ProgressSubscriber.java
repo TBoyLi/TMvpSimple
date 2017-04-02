@@ -2,6 +2,7 @@ package com.redli.tmvpsimple.http;
 
 import android.content.Context;
 
+import com.redli.tmvpsimple.util.NetUtils;
 import com.redli.tmvpsimple.view.SimpleLoadDialog;
 
 import rx.Subscriber;
@@ -13,8 +14,10 @@ import rx.Subscriber;
 public abstract class ProgressSubscriber<T> extends Subscriber<T> implements ProgressCancelListener {
 
     private SimpleLoadDialog dialogHandler;
+    private boolean isConnected;
 
     public ProgressSubscriber(Context context) {
+        isConnected = NetUtils.isConnected(context);
         dialogHandler = new SimpleLoadDialog(context,this,true);
     }
 
@@ -31,7 +34,7 @@ public abstract class ProgressSubscriber<T> extends Subscriber<T> implements Pro
     @Override
     public void onError(Throwable e) {
         e.printStackTrace();
-        if (false) { //这里自行替换判断网络的代码
+        if (isConnected) { //这里自行替换判断网络的代码
             _onError("网络不可用");
         } else if (e instanceof ApiException) {
             _onError(e.getMessage());

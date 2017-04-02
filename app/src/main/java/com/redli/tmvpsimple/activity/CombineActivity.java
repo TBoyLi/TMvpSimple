@@ -28,7 +28,7 @@ public class CombineActivity extends BaseActivity<CombineContract.View, CombineP
     TextView content;
 
     @OnClick(R.id.get_data) void getData(){
-        mPresenter.getMovie(0, 10);
+        mPresenter.getMovie(30, 30);
     }
 
 

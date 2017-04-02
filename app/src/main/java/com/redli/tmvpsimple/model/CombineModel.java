@@ -47,7 +47,7 @@ public class CombineModel extends BaseModel {
                 infoHint.failInfo(message);
             }
         }, Constants.Cache_Key_Movie, ActivityLifeCycleEvent.DESTROY, mLifeCycle,
-                false, false);
+                true, false);
     }
 
 

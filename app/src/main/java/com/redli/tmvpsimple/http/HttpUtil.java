@@ -43,7 +43,13 @@ public class HttpUtil {
      * @param isSave 是否缓存
      * @param forceRefresh 是否强制刷新
      */
-    public void toSubscribe(Observable ob, final ProgressSubscriber subscriber, String cacheKey, final ActivityLifeCycleEvent event, final PublishSubject<ActivityLifeCycleEvent> lifecycleSubject, boolean isSave, boolean forceRefresh) {
+    public void toSubscribe(Observable ob,
+                            final ProgressSubscriber subscriber,
+                            String cacheKey,
+                            final ActivityLifeCycleEvent event,
+                            final PublishSubject<ActivityLifeCycleEvent> lifecycleSubject,
+                            boolean isSave,
+                            boolean forceRefresh) {
         //数据预处理
         Observable.Transformer<HttpResult<Object>, Object> result = RxHelper.handleResult(event,lifecycleSubject);
         Observable observable = ob.compose(result)
