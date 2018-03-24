@@ -8,6 +8,8 @@ Retrofit：<a href="http://wuxiaolong.me/2016/01/15/retrofit/">Android Retrofit 
 
 本文内容是基于TMvp + Retrofit + RxJava做的一些简单的搬运和封装。参考了很多文章（主要参考的是小河马大神的<a href="http://www.jianshu.com/p/bd758f51742e">Android RxJava+Retrofit完美封装（缓存，请求，生命周期管理）</a>）加入了一些自己的理解，请多指教，后续有什么问可github留言，源码地址：<a href="https://github.com/TBoyLi/TMvpSimple">Android TMvp+RxJava+Retrofit完美封装（缓存，请求，生命周期管理）</a>
 
+重大消息 ： 新版本出来啦  详情请看 [新版本](https://www.jianshu.com/p/8a9f2f9d4bb2)
+
 # 主题
 本栏目主要由三个部分组成（如下图）
 
